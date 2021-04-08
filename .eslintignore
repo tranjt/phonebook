@@ -1,0 +1,6 @@
+node_modules
+build
+.eslintrc.js
+/client/node_modules
+/client/.eslintrc.js
+/client/build
