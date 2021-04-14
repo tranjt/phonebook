@@ -23,3 +23,7 @@ jobs:
 
       - name: eslint
         run: npm run eslint
+
+      - name: client test
+        run: npm run test
+        working-directory: client
