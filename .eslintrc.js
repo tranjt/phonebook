@@ -3,7 +3,8 @@ module.exports = {
         'node': true,
         'browser': true,
         'commonjs': true,
-        'es6': true
+        'es6': true,
+        "jest/globals": true
     },
     'extends': 'eslint:recommended',
     'globals': {
@@ -13,6 +14,7 @@ module.exports = {
     'parserOptions': {
         'ecmaVersion': 2018
     },
+    "plugins": ["jest"],
     'rules': {
         'indent': [
             'error',
