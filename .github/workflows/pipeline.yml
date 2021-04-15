@@ -48,12 +48,11 @@ jobs:
         with:
           start: npm run start
 
-      - uses: akhileshns/heroku-deploy@v3.12.12
-        if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
+      - uses: akhileshns/heroku-deploy@v3.12.12        
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "tranjt-phonebook"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-          # healthcheck: "https://tranjt-phonebook.herokuapp.com/health"
-          # checkstring: "ok"
-          # rollbackonhealthcheckfailed: true
+          healthcheck: "https://tranjt-phonebook.herokuapp.com/health"
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
