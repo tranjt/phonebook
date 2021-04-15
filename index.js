@@ -18,6 +18,10 @@ app.get('/health', (req, res) => {
     res.send('ok')
 })
 
+app.get('/version', (req, res) => {
+    res.send('0.0.1')
+})
+
 app.get('/info', (request, response) => {
     Person.find({}).then(persons => {
         response.send(`<div>Phonebook has info for ${persons.length} people</div><br> 
