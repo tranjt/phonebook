@@ -3,12 +3,13 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const Person = require('./models/person')
+const path = require('path')
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
-app.use(express.static('build'))
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 morgan.token('reqBody', (req) => JSON.stringify(req.body))
 app.use(morgan(':method :url :status :total-time[digits] - :response-time ms :reqBody'))
