@@ -4,3 +4,4 @@ build
 /client/node_modules
 /client/.eslintrc.js
 /client/build
+/cypress/integration/phonebook.js

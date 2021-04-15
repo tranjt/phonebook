@@ -19,9 +19,9 @@ const PersonForm = ({ newName, setNewName, newNumber, setNewNumber, addPerson })
           onChange={handleNumberChange} />
       </div>
       <div>
-        <button 
-        type='submit'
-        id='addPerson'
+        <button
+          type='submit'
+          id='addPerson'
         >add</button>
       </div>
     </form>
