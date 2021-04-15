@@ -14,6 +14,10 @@ app.use(express.static(path.join(__dirname, 'client/build')))
 morgan.token('reqBody', (req) => JSON.stringify(req.body))
 app.use(morgan(':method :url :status :total-time[digits] - :response-time ms :reqBody'))
 
+app.get('/health', (req, res) => {
+    res.send('ok')
+})
+
 app.get('/info', (request, response) => {
     Person.find({}).then(persons => {
         response.send(`<div>Phonebook has info for ${persons.length} people</div><br> 
