@@ -19,7 +19,7 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-    res.send('0.0.1')
+    res.send('0.0.2')
 })
 
 app.get('/info', (request, response) => {
